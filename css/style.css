@@ -22,9 +22,45 @@
 /*******************************************/
 
 body {
+     width: 100%;
+
+}
+main{
+     /* display: flex; */
+     margin: 0 auto;
 
 }
 
+section{
+     width: 30%;
+}
+
+
+.top{
+     display: flex;
+     flex-direction: row;
+}
+.top section{
+     border: 1px solid black;
+}
+
+.middle{
+     display: flex;
+     flex-direction: row;
+}
+
+.middle section{
+     border: 1px solid black;
+}
+
+.bottom{
+     display: flex;
+     flex-direction: row;
+}
+
+.bottom section{
+     border: 1px solid black;
+}
 
 /******************************************
 /* LAYOUT
