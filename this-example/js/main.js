@@ -8,13 +8,13 @@ class TestClass {
     console.log(this)
   }
 
-  thisUnbound(){
-    document.querySelector(".click-me").addEventListener("click",this.buttonCode)
-  }
-
-  // thisBound(){
-  //   document.querySelector(".click-me").addEventListener("click",this.buttonCode.bind(this))
+  // thisUnbound(){
+  //   document.querySelector(".click-me").addEventListener("click",this.buttonCode)
   // }
+
+  thisBound(){
+    document.querySelector(".click-me").addEventListener("click",this.buttonCode.bind(this))
+  }
 
   buttonCode(){
     console.log("Click")
@@ -26,5 +26,5 @@ class TestClass {
 
 let test = new TestClass
 
-test.thisUnbound()
-// test.thisBound()
+// test.thisUnbound()
+test.thisBound()
