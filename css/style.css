@@ -17,62 +17,131 @@
 	clear: both;
 }
 
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
+/* Body and Main Styles */
 body {
      width: 100%;
-
-}
-main{
-     /* display: flex; */
-     margin: 0 auto;
-
-}
-
-section{
-     width: 30%;
-}
-
-
-.top{
-     display: flex;
-     flex-direction: row;
-}
-.top section{
-     border: 1px solid black;
+     height: 100vh;
+     text-align: center;
+     font-size: 62.5%;
+     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(3, 234, 255, 0.398),rgba(255, 6, 6, 0.4),rgba(0, 0, 0, 0.8)), url("paper-2.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     font-family: 'Shadows Into Light', cursive;
+     /* google font link for HTML file-> <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">   */
+     letter-spacing: 0.5rem;
 }
 
-.middle{
-     display: flex;
-     flex-direction: row;
-}
-
-.middle section{
-     border: 1px solid black;
-}
-
-.bottom{
-     display: flex;
-     flex-direction: row;
-}
-
-.bottom section{
-     border: 1px solid black;
-}
-
-/******************************************
-/* LAYOUT
-/*******************************************/
 header {
+     margin: 4% 5% 2% 5%;
+     color: white;
+     text-shadow: 2px 2px 5px blue;
+}
 
+header h1{
+     font-size: 2rem;
+     margin: 2%;
+}
+
+header h2{
+     font-size: 1.25rem;
+}
+
+main{
+     width: 100%;
+     margin-top: 10rem;  
+}
+
+main section{
+     height: 10rem;
+}
+     @media screen and (max-width: 400px) {
+          main section{
+               height: 7rem;
+          }
+     }
+
+/* Row Styles, Sizing, and Media Queries*/
+
+.top, .middle, .bottom{
+     display: flex;
+     justify-content: center;        
+}
+
+.top section, .middle section, .bottom section{
+     width: 15%;
+}
+     @media screen and (max-width: 400px) {
+          .top section, .middle section, .bottom section{
+               width: 25%;
+          }
+     }
+
+/*  Borders */
+
+#topLeft {
+     border-right: 3px solid black;
+     border-bottom:3px solid black;
+     border-bottom-right-radius: 10%;
+}
+
+#topCenter{
+     border-right: 3px solid black;
+     border-bottom:3px solid black;
+     border-left: 3px solid black;
+     border-bottom-right-radius: 10%;
+     border-bottom-left-radius: 10%;
+}
+
+#topRight{
+     border-bottom:3px solid black;
+     border-left: 3px solid black;
+     border-bottom-left-radius: 10%;
+}
+
+#middleLeft{
+     border-top: 3px solid black;
+     border-right: 3px solid black;
+     border-bottom: 3px solid black;
+     border-top-right-radius: 10%;
+     border-bottom-right-radius: 10%;
+}
+
+#middleCenter{
+     border: 3px solid black;
+     border-radius: 10%;
+}
+
+#middleRight{
+     border-top: 3px solid black;
+     border-bottom: 3px solid black;
+     border-left: 3px solid black;
+     border-top-left-radius: 10%;
+     border-bottom-left-radius: 10%;
+}
+
+#bottomLeft{
+     border-top: 3px solid black;
+     border-right: 3px solid black;
+     border-top-right-radius: 10%;
+}
+
+#bottomCenter{
+     border-top: 3px solid black;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-top-left-radius: 10%;
+     border-top-right-radius: 10%;
+}
+
+#bottomRight{
+     border-top: 3px solid black;
+     border-left: 3px solid black;
+     border-top-left-radius: 10%;
 }
 
 footer {
-
+     font-size: 1.5rem;
+     text-shadow: 1px 1px 2px white;
+     margin: 7%;
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
