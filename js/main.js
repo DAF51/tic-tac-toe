@@ -76,6 +76,20 @@ class Game{
 //expected to click on the "end turn" button, which will then run the "currentTurn" function again.
 //Since the playerXTurn code changes the player turn, currentTurn should run the opposite player's turn
 //code instead
+
+// the winning conditions
+
+  winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+
   playerOneTurn(){
     this.turnAnnouncement.innerText = "It is currently player one's turn"
     gridArray.forEach(square => square.addEventListener("click", function() {
