@@ -61,8 +61,10 @@ class Game{
   //then it'll run the playerOneTurn function. If its set to false, it'll run the playerTowTurn function
   currentTurn() {
     if(this.playerTurn){
+      this.endGameCheck()
       this.playerOneTurn()
     } else {
+      this.endGameCheck()
       this.playerTwoTurn()
     }
   }
@@ -76,6 +78,7 @@ class Game{
 //expected to click on the "end turn" button, which will then run the "currentTurn" function again.
 //Since the playerXTurn code changes the player turn, currentTurn should run the opposite player's turn
 //code instead
+
   playerOneTurn(){
     this.turnAnnouncement.innerText = "It is currently player one's turn"
     gridArray.forEach(square => square.addEventListener("click", function() {
@@ -95,6 +98,42 @@ class Game{
     this.playerTurn = true
   }
 
+  endGameCheck(){
+    const winningConditions = [
+   [0, 1, 2],
+   [3, 4, 5],
+   [6, 7, 8],
+   [0, 3, 6],
+   [1, 4, 7],
+   [2, 5, 8],
+   [0, 4, 8],
+   [2, 4, 6]
+    ]
+// Indexes within the board
+//    [0] [1] [2]
+//    [3] [4] [5]
+//    [6] [7] [8]
+
+  // loop thru each tile to choose a winner
+  // let roundOne = false;
+ 
+    for (let i = 0; i <= 7; i++) {
+    const winCondition = winningConditions[i];
+    if(winCondition[0]){
+      // document.querySelector('p').innerText = 'YOU WIN'
+      console.log(winningConditions)
+      return true
+      
+    }else{
+      // document.querySelector('p').innerText = 'YOU LOOOOOOSE'
+      console.log(winningConditions) 
+      return false
+    }
+      
+  }
+  
+  }
+  
 
 }
 
